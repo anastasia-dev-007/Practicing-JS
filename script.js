@@ -90,6 +90,70 @@ const result8 = sumEvenNumbers([1,2,3,4,5,6]);
 console.log(result8);
 
 
+// Write a function called findSecondHighest that takes an array of numbers as input and returns the second highest number in the array. If there is no second highest number (e.g., the array has only one element or all elements are the same), the function should return null.
+
+
+const findSecondHighest = (arr) => {
+   const descOrder = arr.sort((a,b) => b-a);
+   return arr.length > 1 ? descOrder[1] : "null";
+  };
+  
+  const numbers = [12, 5, 8, 15, 10];
+  const result = findSecondHighest(numbers);
+  console.log(result); // Output should be 12
+
+// OR
+
+// const findSecondHighest = (arr) => {
+//     const sortDescending = arr.sort(function(a,b) {return b-a});
+//     if (arr.length > 1) {
+//       return sortDescending[1];
+//     } else {
+//       return "null";
+//     }
+    
+//   };
+  
+//   const numbers = [12, 5, 8, 15, 10];
+//   const result = findSecondHighest(numbers);
+//   console.log(result); // Output should be 12
+
+
+
+
+//Write a function called findLongestWord that takes an array of words as input and returns the longest word in the array. If there are multiple words with the same maximum length, the function should return the first occurrence of the longest word.
+
+
+const findLongestWord = (words) => {
+   let longestWord = "";
+   let maxLength = 0;
+
+   words.forEach((word) => {
+    const length = word.length;
+    if (length > maxLength) {
+        maxLength = length;
+        longestWord = word;
+    }
+   } );
+   return longestWord;
+  };
+  
+  const wordArray = ["apple", "banana", "orange", "grapefruit", "kiwi"];
+  const longestWord = findLongestWord(wordArray);
+  console.log(longestWord); // Output should be "grapefruit"
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Write a function called capitalizeFirstLetter that takes a string as input and returns the same string with the first letter capitalized.
 
